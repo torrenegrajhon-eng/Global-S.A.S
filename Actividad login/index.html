@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Login Nivel Dios - Agricultura</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-container" id="loginContainer">
+    <h2>Bienvenido</h2>
+
+    <h5>Ingresa tu usuario y contraseña para ingresar</h5>
+
+    <input type="text" id="usuario" placeholder="Usuario">
+    
+    <div class="password-container">
+        <input type="password" id="password" placeholder="Contraseña">
+        <span id="togglePassword">👁️</span>
+    </div>
+    <p class="info-text">La contraseña debe tener exactamente <strong>8 caracteres especiales</strong></p>
+
+    <div id="captchaDiv">
+        <canvas id="captchaCanvas" width="200" height="50"></canvas>
+        <input type="text" id="captchaInput" placeholder="Escribe el captcha">
+        <button id="btnCaptcha">Verificar Captcha</button>
+    </div>
+
+    <button id="btnLogin">Iniciar sesión</button>
+    <p id="mensaje"></p>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard-container" id="dashboardContainer" style="display:none;">
+    <h2>¡Bienvenido al Dashboard!</h2>
+    
+    <div class="info-card" id="infoCard">
+        <img src="c:\Users\Estudiante\Downloads\web_tipos_agricultura_noviembre_2024_2_421bc5dd89.png" alt="Info Agricultura">
+        <p>Dato del día: El riego eficiente puede aumentar la producción hasta un 40%.</p>
+        <button id="btnCerrarInfo">Cerrar</button>
+    </div>
+
+    <p>Aquí tienes información importante para tu usuario.</p>
+    <button id="btnAgricultura">Ir a Agricultura</button>
+    <button id="btnLogout">Cerrar sesión</button>
+</div>
+
+<!-- PAGINA DE AGRICULTURA -->
+<div class="agricultura-container" id="agriculturaContainer" style="display:none;">
+    <h2>Todo sobre Agricultura</h2>
+    <img src="c:\Users\Estudiante\Downloads\La-agricultura-sostenible-como-solucion-para-la-crisis-climatica-Blog-Espacio-Verde-02-min.jpg" alt="Agricultura" class="dashboard-img">
+    <p>La agricultura es la práctica de cultivar la tierra para producir alimentos, fibras y otros productos necesarios para la vida. Existen diferentes tipos de agricultura como la tradicional, ecológica y de precisión.</p>
+    <h3>Beneficios de la agricultura</h3>
+    <ul>
+        <li>Producción de alimentos para la población.</li>
+        <li>Generación de empleo y desarrollo económico.</li>
+        <li>Conservación de la biodiversidad y el medio ambiente.</li>
+    </ul>
+    <button id="btnVolverDashboard">Volver al Dashboard</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

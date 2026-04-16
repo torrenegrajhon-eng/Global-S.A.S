@@ -1,0 +1,101 @@
+/* Reset básico */
+* { box-sizing: border-box; margin:0; padding:0; font-family: 'Arial', sans-serif; }
+
+/* Fondo */
+body {
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, #4c6ef5, #15aabf);
+    overflow: hidden;
+}
+
+/* Contenedores comunes */
+.login-container, .dashboard-container, .agricultura-container {
+    background:#fff;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.25);
+    width:400px;
+    text-align:center;
+    animation: fadeIn 1s ease;
+}
+
+/* Inputs y botones */
+input[type="text"], input[type="password"] {
+    width:100%;
+    padding:14px 15px;
+    margin:8px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+    transition:0.3s;
+}
+
+input:focus { border-color:#4c6ef5; box-shadow:0 0 10px rgba(76,110,245,0.3); outline:none; }
+
+button {
+    width:100%;
+    padding:14px;
+    margin-top:15px;
+    background:#4c6ef5;
+    color:#fff;
+    font-size:16px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition: all 0.3s;
+}
+
+button:hover { background:#3b5bdb; transform: translateY(-2px); }
+
+/* Password container */
+.password-container { position: relative; }
+.password-container input { padding-right:40px; }
+#togglePassword {
+    position:absolute;
+    top:50%;
+    right:10px;
+    transform:translateY(-50%);
+    cursor:pointer;
+    user-select:none;
+    font-size:18px;
+}
+
+/* Info contraseña */
+.info-text { font-size:14px; color:#555; margin-bottom:10px; }
+
+/* Captcha */
+#captchaDiv { display:none; margin-top:15px; }
+#captchaCanvas { display:block; margin:0 auto 10px auto; border:1px solid #ccc; border-radius:5px; }
+
+/* Mensajes animados */
+#mensaje { margin-top:15px; font-weight:bold; opacity:0; transition:opacity 0.5s ease; }
+
+/* Dashboard imagen */
+.dashboard-img { width:100%; margin:15px 0; border-radius:8px; }
+
+/* Tarjeta info */
+.info-card {
+    background:#e0ffe0;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    opacity:0;
+    transform:translateY(-20px);
+    transition:opacity 0.7s ease, transform 0.7s ease;
+    text-align:center;
+}
+.info-card img { width:100%; border-radius:8px; margin-bottom:10px; }
+.info-card.show { opacity:1; transform:translateY(0); }
+
+/* Agricultura */
+.agricultura-container ul { text-align:left; margin-top:10px; margin-bottom:20px; }
+.agricultura-container li { margin:5px 0; }
+.agricultura-container img { width:100%; border-radius:8px; margin-bottom:15px; }
+
+/* Animaciones */
+@keyframes fadeIn { 0%{opacity:0;transform:translateY(-20px);} 100%{opacity:1;transform:translateY(0);} }
+@keyframes shake { 0%,100%{transform:translateX(0);} 25%{transform:translateX(-5px);} 50%{transform:translateX(5px);} 75%{transform:translateX(-5px);} }
